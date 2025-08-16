@@ -1,0 +1,14 @@
+
+<h2 class="text-center mb-4">Nuestra historia</h2>
+<div class="timeline">
+  <div class="line"></div>
+  <div *ngFor="let e of eventos; let i = index" class="item" [class.right]="i % 2 === 1">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <span class="badge bg-danger-subtle text-danger-emphasis mb-2">{{ e.fecha }}</span>
+        <h5 class="card-title mb-2">{{ e.titulo }}</h5>
+        <p class="card-text">{{ e.detalle }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+
+.carta { max-width: 860px; border-radius: 18px; }
+pre {
+  white-space: pre-wrap; margin: 0; font-family: ui-serif, Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.075rem; line-height: 1.7;
+}
+.typewriter { 
+  display: block; border-left: 3px solid transparent; 
+  max-height: 0; overflow: hidden; transition: max-height 0.8s ease; 
+}
+.typewriter.active {
+  max-height: 1000px; 
+  animation: typing 2.5s steps(40,end) 0.1s both, caret 0.8s step-end infinite;
+  border-left-color: #ff6b8a;
+}
+@keyframes typing {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes caret {
+  0%, 100% { border-left-color: transparent; }
+  50%      { border-left-color: #ff6b8a; }
+}
+
+.reasons-card {
+  background: #fff0f5; /* rosita suave */
+  border-left: 6px solid #ff4d6d;
+  max-height: 500px;
+  overflow-y: auto; /* scroll si es largo */
+}
+
+.reasons-list {
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+.reasons-list li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.reasons-section h2 {
+  font-family: 'Cursive', sans-serif;
+}
+.polaroid {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.polaroid img {
+  width: 100%;
+  height: 220px; /* 📏 ajusta este valor a la altura que quieras */
+  object-fit: cover; /* 🔥 hace que la foto se recorte y no se deforme */
+  border-radius: 8px;
+}
+
+.polaroid:hover {
+  transform: scale(1.05);
+}
+.polaroid p {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  margin-top: 8px;
+}

@@ -1,0 +1,24 @@
+
+.timeline {
+  position: relative; padding: 10px 0 10px 0;
+}
+.line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 4px; background: #ffe0e7; transform: translateX(-50%);
+}
+.item {
+  width: 100%; display: flex; justify-content: flex-start; margin: 20px 0;
+  position: relative;
+}
+.item.right { justify-content: flex-end; }
+.item .card { width: min(520px, 92vw); border-radius: 16px; }
+.item::before {
+  content: ""; position: absolute; top: 22px; left: calc(50% - 8px);
+  width: 16px; height: 16px; background: #ff6b8a; border-radius: 50%;
+  box-shadow: 0 0 0 6px #ffe0e7;
+}
+@media (max-width: 992px) {
+  .line { left: 8px; transform: none; }
+  .item, .item.right { justify-content: flex-start; padding-left: 22px; }
+  .item::before { left: 0; }
+}

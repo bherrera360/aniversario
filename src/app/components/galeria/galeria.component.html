@@ -1,0 +1,19 @@
+
+<h2 class="text-center mb-4">Galería de recuerdos</h2>
+
+<div class="grid">
+  <div class="item" *ngFor="let f of fotos" (click)="abrir(f)">
+    <img [src]="f.src" [alt]="f.titulo" />
+    <div class="caption">{{ f.titulo }}</div>
+  </div>
+</div>
+
+<!-- Modal propio -->
+<div class="modal-backdrop" *ngIf="abierto" (click)="cerrar()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
+    <button class="btn-close" (click)="cerrar()" aria-label="Cerrar"></button>
+    <img *ngIf="actual" [src]="actual.src" class="w-100 rounded-3 mb-3" [alt]="actual?.titulo">
+    <h5 class="mb-1">{{ actual?.titulo }}</h5>
+    <p class="mb-0 text-muted">{{ actual?.descripcion }}</p>
+  </div>
+</div>
